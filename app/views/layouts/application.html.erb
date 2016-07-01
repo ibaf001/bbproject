@@ -11,7 +11,28 @@
 </head>
 <body>
 
-<%= yield %>
+ <div id="main-container" class="container">
+     <div class="row">
+        <div class="text-left" >Logo for Loba</div>
+        <div class="text-right" ><%= link_to("Log in","#") %></div>
+     </div>
+    <div class="row">
+      <nav  id="sidebar" class="col-md-2">
+         <ul>
+             <li><%= link_to("Home",  "#") %></li>
+             <li><%= link_to("Help",  "#") %></li>
+             <li><%= link_to("About","#") %></li>
+             <li><%= link_to("News",  "#") %></li>
+         </ul> 
+      </nav>
+      <div  id="main-content" class="col-md-8">
+        <%= yield %>
+      </div>
+      <div class="col-md-2">
+        nothing
+      </div>
+    </div>
+ </div>
 
 </body>
 </html>
