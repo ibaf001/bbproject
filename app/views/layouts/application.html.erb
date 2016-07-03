@@ -17,6 +17,9 @@
      <%= render 'layouts/sidebar' %>
 
      <div  id="main-content" class="col-md-8">
+        <% flash.each do |message_type, msg| %>
+          <div class="alert alert-<%= message_type %>"><%= msg %></div>
+        <% end %>
         <%= yield %>
      </div>
 
