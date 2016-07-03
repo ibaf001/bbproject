@@ -10,7 +10,7 @@ gem 'rails_12factor'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
-#gem 'puma'
+gem 'unicorn'
 
 gem 'faker',                   '1.4.2'
 gem 'carrierwave',             '0.10.0'
