@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: loba_production
-  username: loba
-  password: <%= ENV['LOBA_DATABASE_PASSWORD'] %>
+  username: ibo #loba
+  password: johanna14 #<%= ENV['LOBA_DATABASE_PASSWORD'] %>
