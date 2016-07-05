@@ -3,13 +3,10 @@ module SessionsHelper
 
   def log_in(user)
     session[:user_id] = user.id
-
-
-  #log out helper
-  def log_out
-    session[:user_id] = nil
-    @current_user = nil  end
   end
+
+
+
 
   #return current user logged in
   def current_user
@@ -24,6 +21,7 @@ module SessionsHelper
     end
   end
 
+
   #return true if user is logged in
   def logged_in?
     !current_user.nil?
@@ -33,5 +31,18 @@ module SessionsHelper
     user.remember
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
+  end
+
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
+
+  #log out helper
+  def log_out
+    forget(current_user)
+    session[:user_id] = nil
+    @current_user = nil  
   end
 end
