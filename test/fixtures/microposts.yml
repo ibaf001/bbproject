@@ -1,15 +1,26 @@
 orange:
   content: "hello orange"
   created_at: <%= 10.minutes.ago.to_s(:db) %>
+  user: miranda
 
 blue:
   content: "Ale les bleues! Ale les blues"
   created_at: <%= 50.minutes.ago.to_s(:db)  %>
+  user: miranda
 
 red:
   content: "ba zoulou ya ucoloc balati rouge"
   created_at: <%= 3.hours.ago.to_s(:db)  %>
+  user: miranda
 
 most_recent:
   content: "oyo ya suka test"
   created_at: <%= Time.now %>
+  user: miranda
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago.to_s(:db) %>
+  user: miranda
+<% end %>
