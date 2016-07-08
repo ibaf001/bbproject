@@ -1,0 +1,15 @@
+orange:
+  content: "hello orange"
+  created_at: <%= 10.minutes.ago.to_s(:db) %>
+
+blue:
+  content: "Ale les bleues! Ale les blues"
+  created_at: <%= 50.minutes.ago.to_s(:db)  %>
+
+red:
+  content: "ba zoulou ya ucoloc balati rouge"
+  created_at: <%= 3.hours.ago.to_s(:db)  %>
+
+most_recent:
+  content: "oyo ya suka test"
+  created_at: <%= Time.now %>
