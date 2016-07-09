@@ -1,7 +1,29 @@
 <% provide(:title, "Home") %>
 
 <h1>LoBa</h1>
+
+<% if logged_in? %>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= render 'shared/user_info' %>
+    <%= render 'shared/micropost_form' %>
+  </div>
+
+  <div class="col-sm-8">
+    <h3>Micropost feed</h3>
+    <%= render 'shared/feed' %>
+  </div>
+
+</div>
+
+<% else %>
 <p>
   this is the home page for the Loba App
 </p>
+<p>
+ <%= Faker::Lorem.sentence(50) %>
+</p>
+
+<% end %>
 
