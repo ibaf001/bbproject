@@ -1,8 +1,8 @@
- <nav  id="sidebar" class="col-md-2">
-     <ul>
-         <li><%= link_to "Home", root_path %></li>
-         <li><%= link_to "Help", help_path %></li>
-         <li><%= link_to "About", about_path %></li>
+ <nav  class="col-md-2 sidebar">
+     <ul >
+         <li ><%= link_to "Home", root_path ,class:  (params[:controller]== 'static_pages' and params[:action] == 'home')?  "focus" : "" %></li>
+         <li><%= link_to "Help", help_path ,class:  (params[:controller]== 'static_pages' and params[:action] == 'help')?  "focus" : ""  %></li>
+         <li><%= link_to "About", about_path ,class:  (params[:controller]== 'static_pages' and params[:action] == 'about')?  "focus" : ""  %></li>
          <li><%= link_to("News",  "#") %></li>
      </ul> 
  </nav>
