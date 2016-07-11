@@ -1,4 +1,8 @@
 <% provide(:title, "Login") %>
+ <div class="col-md-3">
+</div>
+
+<div class="col-md-6">
 
 <h1>Log in</h1>
 
@@ -8,18 +12,21 @@
 
 
  <div class="form-group">
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.label :email %><br>
+  <%= f.text_field :email, class: "col-md-12" %>
  </div>
 
  <div class="form-group">
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.label :password %><br>
+  <%= f.password_field :password , class: "col-md-12"%>
  </div>
 
-<%= f.label :remember_me, class: "checkbox inline" do %>
-  <%= f.check_box :remember_me %><span>Remember me</span>
-<% end %>
+ 
+ 
+     <%= f.label :remember_me, class: "checkbox inline form-group" do %>
+       <%= f.check_box :remember_me %><span>Remember me</span>
+     <% end %>
+  
  
 
   <%= f.submit "Log in" , class: "btn btn-primary" %>
@@ -27,3 +34,8 @@
   <p>New User? <%= link_to "Register", signup_path %> </p>
   <p><%= link_to "Forgot password?", new_password_reset_path %> </p>
 <% end %>
+
+
+</div>
+ <div class="col-md-3">
+</div>

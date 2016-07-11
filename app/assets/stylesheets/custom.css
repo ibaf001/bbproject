@@ -30,7 +30,12 @@
 }
 .form_signup{
    border-style: solid;
+   border-width: 1px;
+   margin: 70px;
+   padding:0px 0px 20px 0px;
+   background-color: #e6e6ff;
 }
+
 
 
 
