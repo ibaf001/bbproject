@@ -2,12 +2,13 @@
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span><%= link_to micropost.user.username, micropost.user %></span>
   <span><%= micropost.content %></span>
-  <span>
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.</span>
-    <% if current_user?(micropost.user) %>
+ <% if current_user?(micropost.user) %>
       
       <%= link_to "",micropost, method: :delete,class: "glyphicon glyphicon-remove delmicro",data: {confirm: 'Do you really want to delete?'} %>
     <% end %>
+<br>
+  <h5><small>Posted <%= time_ago_in_words(micropost.created_at) %> ago.</small></h5>
+   
 <hr>
 </li>
 
