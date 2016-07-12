@@ -15,6 +15,13 @@ bob:
   activated: true
   activated_at: <%= Time.now %>
 
+elodie:
+  username: elodie
+  email: elodia@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.now %>
+
 <% 30.times do |n| %>
 user_<%= n %>:
   username: <%= "User_#{n}" %>
