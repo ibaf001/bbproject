@@ -5,9 +5,13 @@
 <% if logged_in? %>
 
 <div class="row">
-  <div class="col-sm-4">
-    <%= render 'shared/user_info' %>
-    <%= render 'shared/micropost_form' %>
+  <div class="col-sm-4 profile">
+     <div class="row">
+           <%= render 'shared/user_info' %>
+     </div>
+     <div class="row">
+          <%= render 'shared/micropost_form' %>
+     </div>
   </div>
 
   <div class="col-sm-8">

@@ -39,10 +39,14 @@
 .profile_home{
   float: left;
 }
+
 .delmicro{
   color: red;
 }
 
+.profile{
+  margin-top: 70px;
+}
 
 
 
