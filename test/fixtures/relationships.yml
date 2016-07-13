@@ -1,0 +1,12 @@
+one:
+  follower: miranda
+  followed: elodie
+
+two:
+  follower: elodie
+  followed: bob
+
+
+three:
+  follower: elodie
+  followed: miranda
