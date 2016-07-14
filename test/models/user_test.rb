@@ -87,6 +87,24 @@ class UserTest < ActiveSupport::TestCase
     assert_not miranda.following?(bob)
   end
 
+  test "feed should have the right posts" do
+    miranda = users(:miranda)
+    bob = users(:bob)
+    elodie = users(:elodie)
+
+    elodie.microposts.each do |post_following|
+      assert miranda.feed.include?(post_following)
+    end
+
+    miranda.microposts.each do |post_self|
+      assert miranda.feed.include?(post_self)
+    end
+
+    bob.microposts.each do |post_other|
+      assert_not miranda.feed.include?(post_other)
+    end
+  end
+
 end
 
 

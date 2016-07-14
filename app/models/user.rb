@@ -70,7 +70,9 @@ class User < ActiveRecord::Base
   end
   
   def feed
-    Micropost.where("user_id= ?",id)
+    #following_ids = following.map(&:id)
+    following_ids_subselect = "SELECT followed_id FROM relationships WHERE follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids_subselect }) OR user_id = :user_id ",user_id: id)
   end
   
   #Follow a user
